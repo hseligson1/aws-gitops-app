@@ -41,11 +41,6 @@ public class HealthIT {
             .then().body(containsString("Spring boot"));
     }
 	
-	@Test
-    public void fullMessage() {
-		given().when().get("/")
-            .then().body("message",equalTo("Spring boot says hello from a Docker container"));
-    }
 	
 	@Test
     public void health() {
